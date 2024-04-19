@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  color: white;
+}
+
+/* ----------------------------Header--------------------------- */
+
+header > div#greeting {
+  background-color: #202020;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.social-links {
+  max-width: 50%;
+  display: flex;
+}
+.social-links > p {
+  padding: 0 7px;
+  margin: 0 7px;
+  border-left: 2px solid white;
+  outline-offset: 5px;
+  cursor: pointer;
+}
+.social-media > i {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+#brand-logo {
+  max-width: 20%;
+  height: auto;
+}
+header > nav {
+  height: 70px;
+  width: 100%;
+  background-color: #101010;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 30px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 40%;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0 10px;
+}
+.cat-container {
+  position: relative;
+  display: inline-block;
+}
+.nav-links p.nav-category {
+  cursor: pointer;
+}
+div.category {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: #ffff;
+  border-radius: 5px;
+  z-index: 2;
+}
+div.category > a {
+  display: block;
+  padding: 5px 3px;
+  color: #000000;
+  text-align: center;
+  font-size: 1rem;
+}
+div.category > a:hover {
+  background-color: #10101028;
+}
+.nav-links p.nav-category:hover + div.category {
+  display: flex;
+}
+.cat-container:hover div.category {
+  display: block;
+}
+
+.nav-item-cart {
+  display: flex;
+  margin-right: 3%;
+  align-items: center;
+  justify-content: left;
+  position: relative;
+}
+p.cart {
+  font-size: 0.9rem;
+  padding: 5px 20px;
+  border: 2px solid #ffff;
+  border-radius: 4px;
+}
+p.num-items {
+  padding: 5px 7px;
+  position: absolute;
+  top: 1px;
+  right: -8px;
+  background-color: #101010;
+}
+
+/* -------------------------------------------Hero---------------------------------- */
+
+#hero {
+  width: 100%;
+  height: 85%;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 60% 35%;
+  column-gap: 30px;
+  row-gap: 30px;
+  padding: 10px 60px;
+}
+
+div[class^="hero-content"] {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  background-size: cover;
+  background-position-x: center;
+}
+
+div.hero-content-1 {
+  background-image: url(./assets/images/hero-img-1.jpg);
+  grid-row: 1/3;
+  position: relative;
+}
+.content-1 {
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+}
+.content-1 p,
+.content-1 h1 {
+  text-shadow: 2px 2px 4px #000000;
+}
+.content-1 p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8rem;
+}
+.content-1-btn button {
+  border: none;
+  background-color: #541212af;
+  font-weight: 300;
+  padding: 10px;
+  margin: 10px 5px 0 0;
+  cursor: pointer;
+}
+.content-1-btn button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+div.hero-content-2 {
+  background-image: url(./assets/images/hero-img-2.jpg);
+  background-position: 50% 80%;
+  position: relative;
+}
+.content-2 {
+  position: absolute;
+  bottom: 14%;
+  left: 8%;
+}
+.content-2 p,
+.content-2 h2 {
+  text-shadow: 2px 2px 4px #000000;
+}
+.content-2 p {
+  width: 80%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+.content-2 p.content-2-btn {
+  display: inline;
+  border: 2px solid #fff;
+  padding: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.content-2 p.content-2-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+div.hero-content-3 {
+  background-image: url(./assets/images/hero-img-3.jpg);
+  background-position: 0px 80%;
+  position: relative;
+}
+.content-3 {
+  position: absolute;
+  bottom: 14%;
+  left: 8%;
+}
+.content-3 p,
+.content-3 h2 {
+  text-shadow: 2px 2px 4px #000000;
+}
+.content-3 p {
+  width: 80%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+.content-3 span.content-3-btn {
+  display: inline;
+  padding: 5px;
+  font-size: 2rem;
+}
