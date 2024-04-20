@@ -39,8 +39,8 @@ header > div#greeting {
 }
 
 #brand-logo {
-  max-width: 15%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 header > nav {
   height: 70px;
