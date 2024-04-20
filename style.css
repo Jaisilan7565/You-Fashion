@@ -39,7 +39,7 @@ header > div#greeting {
 }
 
 #brand-logo {
-  max-width: 20%;
+  max-width: 15%;
   height: auto;
 }
 header > nav {
@@ -226,4 +226,111 @@ div.hero-content-3 {
   display: inline;
   padding: 5px;
   font-size: 2rem;
+}
+
+/* ------------------------------------------Featured Products------------------------------------------------- */
+
+hr {
+  margin: 0 20px;
+  border-width: 2px;
+  border-color: #202020;
+  margin-top: 10px;
+}
+
+#featured-products h1 {
+  text-align: center;
+  margin: 10px 0;
+}
+#featured-products .product-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  width: 20%;
+  height: auto;
+  margin: 20px;
+  background-color: #101010;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product .product-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 3% 5%;
+}
+.product .product-top .like-btn {
+  width: 100%;
+  text-align: end;
+  background-color: transparent;
+  border: none;
+  color: #999999;
+  font-size: 1.2rem;
+}
+
+.product img {
+  width: 90%;
+  height: auto;
+  padding: 10px 0;
+  background-color: #202020;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+.product img:hover {
+  background-color: #494d5f;
+}
+.product h4 {
+  width: 80%;
+  text-align: center;
+  font-size: 1rem;
+  margin: 12px 0 5px 0;
+}
+.product-price {
+  font-family: "Poppins", sans-serif;
+  margin: 10px;
+}
+.product-add .add-btn {
+  width: 25px;
+  height: 25px;
+  background-color: #e5eaf5;
+  border: none;
+  border-radius: 50%;
+  color: #494d5f;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+}
+.product-add .add-btn:hover {
+  color: red;
+}
+
+/* ---------------------------------------Promotions----------------------------------- */
+
+#promotions {
+  display: flex;
+  margin: 50px;
+  justify-content: space-around;
+  align-items: center;
+}
+.promotion-ad {
+  width: 45%;
+  height: auto;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+#promotions .promotion-video {
+  width: 45%;
+  height: auto;
+}
+video {
+  width: 100%;
+  height: auto;
 }
