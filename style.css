@@ -228,7 +228,7 @@ div.hero-content-3 {
   font-size: 2rem;
 }
 
-/* ------------------------------------------Featured Products------------------------------------------------- */
+/* ------------------------------------------Featured Products & Weekly Top Selling------------------------------------------------- */
 
 hr {
   margin: 0 20px;
@@ -237,11 +237,13 @@ hr {
   margin-top: 10px;
 }
 
-#featured-products h1 {
+#featured-products h1,
+#weekly-top-selling h1 {
   text-align: center;
   margin: 10px 0;
 }
-#featured-products .product-items {
+#featured-products .product-items,
+#weekly-top-selling .product-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -333,4 +335,53 @@ img {
 video {
   width: 100%;
   height: auto;
+}
+
+/* ------------------------------------Weekly Top Selling----------------------------- */
+#delivery-msg {
+  text-align: center;
+  margin: 60px 0 30px 0;
+}
+
+/* ---------------------------------------Footer---------------------------------- */
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #101010;
+}
+
+#info-container {
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-us,
+.contact-us,
+.location {
+  max-width: 33.33%;
+  padding: 0 10px;
+}
+.about-us img {
+  width: 60%;
+}
+.contact-us h2,
+.location h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.contact-us p {
+  margin: 20px 0;
+}
+.location iframe {
+  width: 100%;
+  height: auto;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 2px solid #5c5c5c;
 }
