@@ -39,8 +39,8 @@
           alt="brand logo"
         />
         <div class="nav-links">
-          <a href="#">Home</a>
-          <a href="#">Shop</a>
+          <a href="#greeting" onclick="home()">Home</a>
+          <a href="#" onclick="shop()">Shop</a>
           <div class="cat-container">
             <p class="nav-category">
               Category <i class="fa-solid fa-angle-down"></i>
@@ -51,15 +51,48 @@
               <a href="#">Watches</a>
             </div>
           </div>
-          <a href="#">About Us</a>
-          <a href="#">Blog</a>
+          <a href="#footer">About Us</a>
         </div>
         <div class="nav-item-cart">
           <p class="cart">CART</p>
-          <p class="num-items">0</p>
+          <p class="num-items" id="num-items">0</p>
         </div>
       </nav>
     </header>
+
+    <div id="fix-cart-btn">
+      <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+
+    <div id="checkout-cart">
+      <h2>Shopping Cart</h2>
+      <div class="checkout-products" id="checkout-products">
+
+        <!-- <div class="cart-product">
+          <img src="./assets/images/cloth-4.png" alt="Female Suede Hoodie" />
+          <h4>Female Suede Hoodie</h4>
+          <p class="cart-product-price">&#x20B9;2,999</p>
+          <div class="product-quantity">
+            <i class="fa-solid fa-angle-left"></i>
+              <span class="quantity">0</span>
+            <i class="fa-solid fas fa-angle-right"></i>
+          </div>
+          <div class="delete-product">
+            <button id="delete">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div> -->
+        
+
+      </div>
+
+      <div class="cart-footer">
+        <button id="close" onclick="closeCart()">Close</button>
+        <button id="checkout">CheckOut</button>
+      </div>
+    </div>
+    
     <!-- ---------------------------------Hero Section------------------------------------ -->
     <div id="hero">
       <div class="hero-content-1">
@@ -71,8 +104,8 @@
             Everyone
           </h1>
           <div class="content-1-btn">
-            <button><a href="#">BROWSE</a></button>
-            <button><a href="#">SHOP THE LOOK</a></button>
+            <button><a href="#featured-products">BROWSE</a></button>
+            <button onclick="shop()"><a href="#">SHOP THE LOOK</a></button>
           </div>
         </div>
       </div>
@@ -80,7 +113,7 @@
         <div class="content-2">
           <h2>Designer Backpacks</h2>
           <p>Inspire your unique backpack style with us.</p>
-          <p class="content-2-btn"><a href="#">Lets Do It</a></p>
+          <p class="content-2-btn"><a href="#featured-products">Lets Do It</a></p>
         </div>
       </div>
       <div class="hero-content-3">
@@ -100,7 +133,7 @@
         <div class="product">
           <div class="product-top">
             <p class="new-item">New</p>
-            <button class="like-btn">
+            <button class="like-btn" id="31" onclick="likeProduct(31)">
               <i class="fa-solid fa-heart"></i>
             </button>
           </div>
@@ -108,7 +141,7 @@
           <h4>Seiko Astron Watch</h4>
           <p class="product-price">&#x20B9;25,500</p>
           <div class="product-add">
-            <button class="add-btn">
+            <button class="add-btn" onclick="addProduct(31,'Seiko Astron Watch','25,500','./assets/images/watch-1.png')">
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
@@ -116,7 +149,7 @@
 
         <div class="product">
           <div class="product-top">
-            <button class="like-btn">
+            <button class="like-btn" id="14" onclick="likeProduct(14)">
               <i class="fa-solid fa-heart"></i>
             </button>
           </div>
@@ -124,7 +157,7 @@
           <h4>Female Suede Hoodie</h4>
           <p class="product-price">&#x20B9;2,999</p>
           <div class="product-add">
-            <button class="add-btn">
+            <button class="add-btn" onclick="addProduct(14,'Female Suede Hoodie','2,999','./assets/images/cloth-4.png')">
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
@@ -133,7 +166,7 @@
         <div class="product">
           <div class="product-top">
             <p class="new-item">New</p>
-            <button class="like-btn">
+            <button class="like-btn" id="22" onclick="likeProduct(22)">
               <i class="fa-solid fa-heart"></i>
             </button>
           </div>
@@ -141,7 +174,7 @@
           <h4>Unisex Sling Bag</h4>
           <p class="product-price">&#x20B9;1,280</p>
           <div class="product-add">
-            <button class="add-btn">
+            <button class="add-btn" onclick="addProduct(22,'Unisex Sling Bag','1,280','./assets/images/bag-2.png')">
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
@@ -150,7 +183,7 @@
         <div class="product">
           <div class="product-top">
             <p class="new-item">New</p>
-            <button class="like-btn">
+            <button class="like-btn" id="11" onclick="likeProduct(11)">
               <i class="fa-solid fa-heart"></i>
             </button>
           </div>
@@ -158,7 +191,7 @@
           <h4>Unisex Leather Jacket</h4>
           <p class="product-price">&#x20B9;1,999</p>
           <div class="product-add">
-            <button class="add-btn">
+            <button class="add-btn" onclick="addProduct(11,'Unisex Leather Jacket','1,999','./assets/images/cloth-1.png')">
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
@@ -166,7 +199,7 @@
 
         <div class="product">
           <div class="product-top">
-            <button class="like-btn">
+            <button class="like-btn" id="15" onclick="likeProduct(15)">
               <i class="fa-solid fa-heart"></i>
             </button>
           </div>
@@ -174,7 +207,7 @@
           <h4>Male Hoodie</h4>
           <p class="product-price">&#x20B9;1,299</p>
           <div class="product-add">
-            <button class="add-btn">
+            <button class="add-btn" onclick="addProduct(15,'Male Hoodie','1,299','./assets/images/cloth-5.png')">
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
@@ -183,7 +216,7 @@
         <div class="product">
           <div class="product-top">
             <p class="new-item">New</p>
-            <button class="like-btn">
+            <button class="like-btn" id="12" onclick="likeProduct(12)">
               <i class="fa-solid fa-heart"></i>
             </button>
           </div>
@@ -191,7 +224,7 @@
           <h4>Round Neck T-Shirt</h4>
           <p class="product-price">&#x20B9;479</p>
           <div class="product-add">
-            <button class="add-btn">
+            <button class="add-btn" onclick="addProduct(12,'Round Neck T-Shirt','479','./assets/images/cloth-2.png')">
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
@@ -199,7 +232,7 @@
 
         <div class="product">
           <div class="product-top">
-            <button class="like-btn">
+            <button class="like-btn"  id="13" onclick="likeProduct(13)">
               <i class="fa-solid fa-heart"></i>
             </button>
           </div>
@@ -207,7 +240,7 @@
           <h4>Brown Tweed Suit (Men)</h4>
           <p class="product-price">&#x20B9;10,420</p>
           <div class="product-add">
-            <button class="add-btn">
+            <button class="add-btn" onclick="addProduct(13,'Brown Tweed Suit (Men)','10,420','./assets/images/cloth-3.png')">
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
@@ -215,7 +248,7 @@
 
         <div class="product">
           <div class="product-top">
-            <button class="like-btn">
+            <button class="like-btn" id="21" onclick="likeProduct(21)">
               <i class="fa-solid fa-heart"></i>
             </button>
           </div>
@@ -223,7 +256,7 @@
           <h4>Star Wars Boba Fett Backpack</h4>
           <p class="product-price">&#x20B9;13,159</p>
           <div class="product-add">
-            <button class="add-btn">
+            <button class="add-btn" onclick="addProduct(21,'Star Wars Boba Fett Backpack','13,159','./assets/images/bag-1.png')">
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
@@ -250,7 +283,7 @@
         
         <div class="product">
           <div class="product-top">
-            <button class="like-btn">
+            <button class="like-btn" id="16" onclick="likeProduct(16)">
               <i class="fa-solid fa-heart"></i>
             </button>
           </div>
@@ -258,7 +291,7 @@
           <h4>Tommy Hilfiger Men T-Shirt</h4>
           <p class="product-price">&#x20B9;2,900</p>
           <div class="product-add">
-            <button class="add-btn">
+            <button class="add-btn" onclick="addProduct(16,'Tommy Hilfiger Men T-Shirt','2,900','./assets/images/cloth-6.png')">
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
@@ -266,7 +299,7 @@
 
         <div class="product">
           <div class="product-top">
-            <button class="like-btn">
+            <button class="like-btn" id="32" onclick="likeProduct(32)">
               <i class="fa-solid fa-heart"></i>
             </button>
           </div>
@@ -274,7 +307,7 @@
           <h4>TAG Heuer Aquaracer Watch</h4>
           <p class="product-price">&#x20B9;32,233</p>
           <div class="product-add">
-            <button class="add-btn">
+            <button class="add-btn" onclick="addProduct(32,'TAG Heuer Aquaracer Watch','32,233','./assets/images/watch-2.png')">
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
@@ -282,7 +315,7 @@
 
         <div class="product">
           <div class="product-top">
-            <button class="like-btn">
+            <button class="like-btn" id="23" onclick="likeProduct(23)">
               <i class="fa-solid fa-heart"></i>
             </button>
           </div>
@@ -290,7 +323,7 @@
           <h4>Unisex Waist Bag</h4>
           <p class="product-price">&#x20B9;2,250</p>
           <div class="product-add">
-            <button class="add-btn">
+            <button class="add-btn" onclick="addProduct(23,'Unisex Waist Bag','2,250','./assets/images/bag-3.png')">
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
@@ -299,7 +332,7 @@
         <div class="product">
           <div class="product-top">
             <p class="new-item">New</p>
-            <button class="like-btn">
+            <button class="like-btn" id="17" onclick="likeProduct(17)">
               <i class="fa-solid fa-heart"></i>
             </button>
           </div>
@@ -307,7 +340,7 @@
           <h4>British Flag Jacket</h4>
           <p class="product-price">&#x20B9;2,000</p>
           <div class="product-add">
-            <button class="add-btn">
+            <button class="add-btn" onclick="addProduct(17,'British Flag Jacket','2,000','./assets/images/cloth-7.png')">
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
@@ -319,7 +352,7 @@
       <h3><i class="fa-solid fa-truck"></i> Free delivery for order more than &#x20B9;10,000</h3>
     </div>
 <!-- --------------------------------------Footer-------------------------------------------------- -->
-    <footer>
+    <footer id="footer">
       <div id="info-container">
         <div class="about-us">
           <img src="./assets/images/You_Fashion_Logo.png" alt="brand-logo">
@@ -343,4 +376,5 @@
     </footer>
     
   </body>
+  <script src="index.js"></script>
 </html>

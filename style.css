@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Georgia, "Times New Roman", Times, serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -70,6 +71,9 @@ header > nav {
 .nav-links p.nav-category {
   cursor: pointer;
 }
+.nav-item-cart p.cart {
+  cursor: pointer;
+}
 div.category {
   display: none;
   position: absolute;
@@ -115,6 +119,97 @@ p.num-items {
   top: 1px;
   right: -8px;
   background-color: #101010;
+}
+/* --------------------------------Checkout Cart--------------------------------- */
+
+#checkout-cart {
+  width: 40%;
+  height: 100%;
+  background-color: #545454af;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  position: fixed;
+  display: none;
+}
+#checkout-cart .checkout-products {
+  height: 85%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+#checkout-cart .cart-footer {
+  width: 100%;
+  height: 10%;
+  align-content: center;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+#checkout-cart .cart-footer button {
+  width: 50%;
+  height: 100%;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+#checkout-cart .cart-footer button#checkout {
+  background-color: #541212;
+  color: #fff;
+}
+#checkout-cart h2 {
+  text-align: center;
+  color: #ffff;
+  background-color: #101010;
+  padding: 10px 0;
+}
+.cart-product {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #202020;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.cart-product img {
+  background-color: #999999ad;
+  border-radius: 10px;
+  max-width: 15%;
+  margin: 10px 0;
+  height: auto;
+}
+.cart-product h4 {
+  max-width: 30%;
+  font-size: 0.9rem;
+}
+.cart-product p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8rem;
+}
+.cart-product .delete-product button {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  color: red;
+}
+.cart-product .product-quantity i {
+  cursor: pointer;
+}
+
+#fix-cart-btn {
+  background-color: #541212;
+  position: fixed;
+  bottom: 20%;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
 }
 
 /* -------------------------------------------Hero---------------------------------- */
@@ -238,12 +333,14 @@ hr {
 }
 
 #featured-products h1,
-#weekly-top-selling h1 {
+#weekly-top-selling h1,
+#category-products {
   text-align: center;
   margin: 10px 0;
 }
 #featured-products .product-items,
-#weekly-top-selling .product-items {
+#weekly-top-selling .product-items,
+#category-products .product-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -273,6 +370,7 @@ hr {
   border: none;
   color: #999999;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .product img {
