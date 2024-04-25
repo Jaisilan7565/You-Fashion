@@ -483,3 +483,89 @@ footer {
   padding: 20px 0;
   border-top: 2px solid #5c5c5c;
 }
+
+/* ---------------------------------------------------------Responsive for smaller devices----------------------------------------- */
+
+@media screen and (max-width: 800px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+  }
+
+  #hero {
+    grid-template-columns: 50% 50%;
+  }
+  #hero div.hero-content-1 {
+    grid-column: 1/3;
+  }
+  #hero h1 {
+    font-size: 1.5rem;
+  }
+  #hero h2 {
+    font-size: 1.3rem;
+  }
+  #hero p,
+  #delivery-msg h3 {
+    font-size: 0.7rem;
+  }
+  div#featured-products h1,
+  div#weekly-top-selling h1 {
+    font-size: 1.5rem;
+  }
+
+  .product {
+    width: 40%;
+  }
+  #promotions {
+    flex-direction: column;
+  }
+  #promotions .promotion-ad,
+  #promotions .promotion-video {
+    width: 100%;
+    height: auto;
+  }
+
+  #info-container {
+    flex-direction: column;
+  }
+  .about-us,
+  .contact-us,
+  .location {
+    max-width: 100%;
+    padding: 20px 0;
+  }
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-us p,
+  .about-us p {
+    text-align: center;
+  }
+
+  #checkout-cart {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .social-links {
+    display: none;
+  }
+  header > div#greeting {
+    text-align: center;
+    position: relative;
+    visibility: hidden;
+  }
+  nav {
+    height: 20%;
+  }
+  nav div.nav-links {
+    position: absolute;
+    top: 10px;
+    width: 90%;
+  }
+}
