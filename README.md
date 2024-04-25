@@ -8,7 +8,7 @@ Welcome to You Fashion, a simple web application for exploring fashion trends an
 
 - Your favorite items, and Cart items will be saved using Web Storage API.
 - Responsive Design
-  ![Responsive-You-Fashion](https://github.com/Jaisilan7565/You-Fashion/assets/105548113/1624f91e-0459-4883-8f06-3af235141137)
+![Responsive-You-Fashion](https://github.com/Jaisilan7565/You-Fashion/assets/105548113/1624f91e-0459-4883-8f06-3af235141137)
 
 
 ## Technologies Used
